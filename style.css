@@ -506,7 +506,8 @@ nav {
 .middleColumns .column {
   margin-right: 25px;
 }
-.toggleRight {
+.toggleRight,
+.toggleRight-ar {
   width: 40px;
   cursor: pointer;
 }
@@ -634,6 +635,16 @@ nav {
     width: 250px;
     height: 300px;
   }
+  .toggleMenu-ar {
+    left: 0;
+    position: absolute;
+    background-color: #b0b71c;
+    left: 0;
+    top: 100px;
+    margin-top: 10px;
+    width: 250px;
+    height: 300px;
+  }
   .hide {
     display: none;
   }
@@ -654,7 +665,11 @@ nav {
   body {
     text-align: center;
   }
-  .left-side p {
+  .left-side p,
+  .CTA p,
+  .brief p,
+  .analyze p,
+  .questions p {
     text-align: center;
   }
   .columnContainer,

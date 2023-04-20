@@ -1,0 +1,261 @@
+.navContainer{
+  position: fixed;
+  z-index: 999;
+}
+
+.sideBar {
+  height: 100%;
+  z-index: 99999;
+  display: flex;
+  position: fixed;
+  width: 0;
+}
+.sideBox {
+  width: 0px;
+  left: 0;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: inset -3px -5px 10px 0px lightgray;
+  transition: width 1s ease;
+  z-index: 999;
+}
+.sideBox.widthHandler{
+  width: 240px;
+}
+
+.sideBox a{
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.sideBox a.show-hide-link{
+  opacity: 1;
+}
+.logout{
+  padding-top: 500px;
+  transition: all 2s ease;
+}
+.logout.get-logout-up{
+  padding: 0;
+}
+.open {
+  cursor: pointer;
+  width: 50px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  z-index: 999999;
+  transition: all 1s ease;
+}
+.open.openHandler{
+  left: 240px;
+}
+.navBar{
+  height: 75px;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgb(235, 238, 241);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.show{
+  opacity: 1;
+}
+.hide{
+  opacity: 0;
+}
+@media screen and (max-width:600px) {
+  .navBar{
+    width: 100%;
+  }
+}
+
+.button-invisible{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.mini-pic{
+  width: 50px;
+  height:50px;
+  margin-bottom: 5px;
+}
+.mini-pic img{
+  transform: translateY(5px);
+}
+.profileContainer{
+  height: 100vh;
+  background-image: url(Images/Background.png);
+  background-size: auto auto;
+  background-size: cover;
+  background-position: center;
+}
+.profile-content{
+  min-width: 375px;
+  min-height: 600px;
+}
+.profile-pic{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.social-icons svg{
+margin-bottom: 10px;
+fill: gray;
+  width: 32px;
+  height: 32px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.social-icons .facebook{
+  fill: #083170;
+}
+.social-icons .youtube{
+  fill:#083170;
+}
+.social-icons .twitter{
+  fill: #083170;
+}
+.social-icons .tiktok{
+  fill: #083170;
+}
+.social-icons .instagram{
+  fill: #083170;
+}
+.social-icons .e-mail{
+  fill: #083170;
+}
+
+.profile-update{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 1);
+  height: 600px;
+  width: 600px;
+  top: 25%;
+  right: 5%;
+  overflow:auto ;
+}
+.outer-circle{
+  width:25px;
+  height:25px;
+  border-radius: 50%;
+  bottom: 5px;
+  right: 5px;
+}
+.inner-circle{
+width: 15px;
+height: 15px;
+border-radius: 50%;
+cursor: pointer;
+}
+.fa-camera{
+  color:white
+}
+
+
+.styled-container{
+  /* overflow: hidden; */
+  
+  border: none;
+  color: rgb(255, 255, 255);
+
+  border-radius: 4px;
+  width: 42vw;
+  max-width: 1200px;
+  min-width: 350px;
+  margin-top: 32px;
+  
+}
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.02);
+  }
+}
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.02);
+  }
+}
+.hvr-pop {
+  display: flex;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.hvr-pop:hover .profile-link button{
+  opacity: 100%;
+}
+
+.pic-container{
+overflow: hidden;
+  pointer-events: none;
+  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+}
+.pic-container img{
+border-radius: 0px;
+display: block;
+height: 100%;
+object-fit: cover;
+object-position: initial;
+width: 100%;
+}
+
+.profile-link{
+  margin: 0px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 1);
+    margin-bottom: 16px;
+    box-shadow: 5px 5px 5px lightgray;
+}
+.profile-link button{
+  right: 8px;
+  opacity: 0;
+  display: flex;
+  color: black;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 99999;
+  transition: all .15s ease-in;
+}
+.profile-text{
+  padding: 0px;
+    margin: 0px;
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.85);
+
+}
+.verified img{
+  transform: translateY(50%);
+  margin-left: 5px;
+}

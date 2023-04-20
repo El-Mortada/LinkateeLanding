@@ -1,7 +1,9 @@
 /** @format */
 
 const toggleRight = document.querySelector(".toggleRight");
+const toggleRightAr = document.querySelector(".toggleRight-ar");
 const toggleMenu = document.querySelector(".toggleMenu");
+const toggleMenuAr = document.querySelector(".toggleMenu-ar");
 const changeLang = document.querySelectorAll(".lang");
 const arabicContainer = document.querySelector(".arabicContainer");
 const englishContainer = document.querySelector(".englishContainer");
@@ -10,14 +12,19 @@ const subToggleModeSections = document.querySelectorAll(".subToggleMode");
 const darkModeBtn = document.querySelector('input[type="checkbox"]');
 const darkModeAr = document.querySelector('input[value="ar"]');
 
-const showHideMenu = () => {
+const showHideMenu = (toggleMenu) => {
   if (toggleMenu.classList.contains("hide")) {
     toggleMenu.classList.replace("hide", "show");
   } else if (toggleMenu.classList.contains("show")) {
     toggleMenu.classList.replace("show", "hide");
   }
 };
-toggleRight.addEventListener("click", showHideMenu);
+toggleRight.addEventListener("click", () => {
+  showHideMenu(toggleMenu);
+});
+toggleRightAr.addEventListener("click", () => {
+  showHideMenu(toggleMenuAr);
+});
 
 const checkLang = () => {
   document.body.innerHTML = "";
